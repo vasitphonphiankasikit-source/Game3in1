@@ -39,7 +39,8 @@
   <!-- Number Guess -->
   <section id="number-game">
     <h2>🎯 Number Guess</h2>
-    <p id="guess-instruction">Guess a number between 1 and <span id="guess-max">10</span></p>
+    <p id="guess-instruction">Guess a number between 1 and 100</span></p>
+    <button onclick="updateGuessMax()">🔄 New Number</button>
     <input type="number" id="guess" />
     <button onclick="checkGuess()">Guess!</button>
     <p id="result"></p>
