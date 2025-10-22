@@ -1,0 +1,123 @@
+ :root{
+      --bg: #000;
+      --text: #fff;
+      --card-bg: #2f2f2f;
+      --card-text: #d4d4d4;
+      --btn-bg: #007bff;
+      --btn-text: #f0f0f0;
+    }
+    body.light{
+      --bg: #f9f9f9;
+      --text: #111;
+      --card-bg: #575757;
+      --card-text: #e3e0e0;
+      --btn-bg: #007bff;
+      --btn-text: #fff;
+    }
+
+    body {
+      font-family: "Prompt", sans-serif;
+      font-weight: 400;
+      font-size: 15px;
+      font-style: normal;
+      text-align: center;
+      background: var(--bg);
+      color: var(--text);
+      padding: 20px;
+      transition: background .25s ease, color .25s ease;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      color: var(--text);
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    input {
+      padding: 5px;
+      font-size: 16px;
+      color: var(--text);
+      background: var(--bg);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    button {
+      font-family: "Prompt", sans-serif;
+      font-weight: 200;
+      font-style: normal;
+      background: var(--btn-bg);
+      color: var(--btn-text);
+      text-transform: uppercase;
+      padding: 5px 10px;
+      font-size: 16px;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+
+    #result, #memory-result, #recall-result {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .game-board {
+      display: grid;
+      grid-template-columns: repeat(4, 80px);
+      gap: 10px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .card {
+      width: 80px;
+      height: 80px;
+      background: var(--card-bg);
+      color: var(--card-text);
+      font-size: 2em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border-radius: 8px;
+      user-select: none;
+      transition: background .2s ease, color .2s ease;
+    }
+
+    .card.flipped {
+      background: var(--card-text);
+      color: var(--card-bg);
+    }
+
+    #number-sequence {
+      font-size: 24px;
+      margin: 15px 0;
+      letter-spacing: 10px;
+      color: var(--text);
+    }
+
+    /* controls */
+    #controls {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    #controls label { font-weight: 600; color: var(--text); }
+    #level-value { font-weight: 700; margin-left: 8px; color: var(--text); }
+
+    /* theme toggle */
+    .theme-switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      user-select: none;
+    }
+    .theme-switch input {
+       transform: scale(1.1);
+       }
