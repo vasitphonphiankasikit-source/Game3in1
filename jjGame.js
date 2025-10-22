@@ -1,6 +1,4 @@
   // Difficulty & Mode controls
-    let maxNumber = 100;
-    let targetNumber = Math.floor(Math.random() * maxNumber) + 1;
     const modeSelect = document.getElementById('mode-select');
     const levelInput = document.getElementById('level-input');
     const levelValue = document.getElementById('level-value');
@@ -45,6 +43,7 @@
     // -------------------------------
     // 🎯 Number Guess (scaled by level)
     // -------------------------------
+    let secretNumber = 0;
     function guessMaxForLevel() {
       // map level 1..10 to max 10..100
       return Number(levelInput.value) * 10;
@@ -53,23 +52,28 @@
     function updateGuessMax() {
       const max = guessMaxForLevel();
       document.getElementById('guess-max').innerText = max;
-      // regenerate target number when level changes
-      targetNumber = Math.floor(Math.random() * maxNumber) + 1;
+      // regenerate secret number when level changes
+      secretNumber = Math.floor(Math.random() * max) + 1;
       document.getElementById('result').innerText = '';
     }
 
     function checkGuess() {
-     const guess = parseInt(document.getElementById("guess").value);
-     if (isNaN(guess)) {
-       document.getElementById("result").textContent = "Please enter a number.";
-     } else if (guess === targetNumber) {
-       document.getElementById("result").textContent = "🎉 Correct!";
-     } else if (guess < targetNumber) {
-       document.getElementById("result").textContent = "Too low!";
-     } else {
-       document.getElementById("result").textContent = "Too high!";
-    }
-
+      const guess = parseInt(document.getElementById('guess').value);
+      const result = document.getElementById('result');
+      if (isNaN(guess)) {
+        result.innerText = '⛔ Please enter a number';
+        return;
+      }
+      if (guess === secretNumber) {
+        result.innerText = '🎉 Correct! (new number generated)';
+        // generate new secret keeping same max
+        const max = guessMaxForLevel();
+        secretNumber = Math.floor(Math.random() * max) + 1;
+      } else if (guess < secretNumber) {
+        result.innerText = 'To LOW!!';
+      } else {
+        result.innerText = 'To HIGH!!';
+      }
     }
 
     // -------------------------------
