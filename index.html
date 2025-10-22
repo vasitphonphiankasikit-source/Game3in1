@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,200;0,400&display=swap" rel="stylesheet">
+  <title>Number Guess & Memory & Recall Games</title>
+  <link rel="stylesheet" href="jjGame.css" />
+</head>
+<body>
+  <h1>🎮 Web Games</h1>
+
+  <!-- Global controls: mode & difficulty -->
+  <div id="controls">
+    <div>
+      <label for="mode-select">Mode:</label>
+      <select id="mode-select">
+        <option value="all">Show all</option>
+        <option value="guess">Number Guess</option>
+        <option value="memory">Memory Game</option>
+        <option value="recall">Number Recall</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="level-input">Level (Easy → Hard):</label>
+      <input id="level-input" type="range" min="1" max="10" value="1" />
+      <span id="level-label">Level <span id="level-value">1</span> (Easy)</span>
+    </div>
+
+    <!-- theme toggle -->
+    <div class="theme-switch" title="Toggle dark/light theme">
+      <input type="checkbox" id="theme-toggle" />
+      <label for="theme-toggle">Light mode</label>
+    </div>
+  </div>
+
+  <!-- Number Guess -->
+  <section id="number-game">
+    <h2>🎯 Number Guess</h2>
+    <p id="guess-instruction">Guess a number between 1 and <span id="guess-max">10</span></p>
+    <input type="number" id="guess" />
+    <button onclick="checkGuess()">Guess!</button>
+    <p id="result"></p>
+  </section>
+
+  <!-- Memory Game -->
+  <section id="memory-game">
+    <h2>🧠 Memory Game</h2>
+    <p id="memory-instruction">Match the cards — Grid: <span id="memory-pairs">4×4</span></p>
+    <div class="game-board"></div>
+    <p id="memory-result"></p>
+  </section>
+
+  <!-- Number Recall -->
+  <section id="recall-game">
+    <h2>🧮 Number Recall</h2>
+    <p id="recall-instruction">Memorize the number sequence</p>
+    <button onclick="startRecallGame()">Start</button>
+    <div id="number-sequence"></div>
+    <input type="text" id="recall-input" placeholder="Enter remembered numbers" />
+    <button onclick="submitRecall()">Submit</button>
+    <p id="recall-result"></p>
+  </section>
+  <script src="jjGame.js"></script>
+</body>
+</html>
