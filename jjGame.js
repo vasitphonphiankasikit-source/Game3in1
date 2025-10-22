@@ -83,7 +83,7 @@
     let flippedCards = [];
     let matched = [];
     let currentPairs = 2;
-
+   
     function buildMemoryBoard() {
       // grid size: level 1 -> 4x4, level 2 -> 5x5, ... level 10 -> 13x13
       const lvl = Number(levelInput.value);
@@ -178,7 +178,13 @@
 
       document.getElementById('memory-result').innerText = '';
     }
-
+    function upLevelMemoryBoard() {
+      let currentLevel = Number(levelInput.value);
+      if (currentLevel < 10) {
+        levelInput.value = currentLevel + 1;
+        updateLevelUI();
+      }
+    }
     // -------------------------------
     // 🧮 Number Recall (scaled by level)
     // -------------------------------
@@ -304,3 +310,4 @@
     updateGuessMax();
     // build memory board initially
     buildMemoryBoard();
+
