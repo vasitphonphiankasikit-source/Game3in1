@@ -206,7 +206,7 @@ button:active {
   }
 
   .animated-title {
-    font-size: 75px;
+    font-size: 55px;
   }
 
   .timer-display {
@@ -268,3 +268,4 @@ button:active {
   text-align: center;
   }
 }
+
