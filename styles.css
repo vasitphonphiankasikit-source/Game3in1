@@ -17,7 +17,7 @@ body {
   justify-content: flex-start;
 }
 h2{
-  font-size: 30px;
+  font-size: 50px;
   color: #333;
   margin: 0 0 20px 0;
 }
@@ -191,19 +191,19 @@ button:active {
   .board.grid-10 .card { width: 75px; height: 75px; font-size: 40px; }
 
   .win-message {
-    font-size: 50px;
+    font-size: 65px;
   }
 
   .animated-title {
-    font-size: 45px;
+    font-size: 75px;
   }
 
   .timer-display {
-    font-size: 60px;
+    font-size: 65px;
   }
 
   button {
-    font-size: 60px;
+    font-size: 65px;
     padding: 20px 60px;
   }
 
@@ -231,19 +231,19 @@ button:active {
   .board.grid-10 .card { width: 75px; height: 75px; font-size: 40px; }
 
   .win-message {
-    font-size: 50px;
+    font-size: 55px;
   }
 
   .animated-title {
-    font-size: 45px;
+    font-size: 65px;
   }
 
   .timer-display {
-    font-size: 60px;
+    font-size: 55px;
   }
 
   button {
-    font-size: 40px;
+    font-size: 55px;
     padding: 20px 60px;
   }
 
