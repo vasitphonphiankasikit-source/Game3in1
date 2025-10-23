@@ -44,7 +44,7 @@ h3{
 .board.grid-4 .card { width: 100px; height:100px; font-size: 60px; }
 .board.grid-6 .card { width: 70px; height: 70px; font-size: 40px; }
 .board.grid-8 .card { width: 50px; height: 50px; font-size: 20px; }
-.board.grid-10 .card { width: 40px; height: 40px; font-size: 18px; }
+.board.grid-10 .card { width: 60px; height: 60px; font-size: 38px; }
 
 /* การ์ด */
 .card {
@@ -198,8 +198,8 @@ button:active {
 
   .board.grid-4 .card { width: 160px; height:160px; font-size: 80px; }
   .board.grid-6 .card { width: 120px; height:120px; font-size: 70px; }
-  .board.grid-8 .card { width: 90px; height: 90px; font-size: 50px; }
-  .board.grid-10 .card { width: 75px; height: 75px; font-size: 40px; }
+  .board.grid-8 .card { width: 80px; height: 80px; font-size: 50px; }
+  .board.grid-10 .card { width: 63px; height: 63px; font-size: 40px; }
 
   .win-message {
     font-size: 65px;
@@ -239,8 +239,8 @@ button:active {
 
   .board.grid-4 .card { width: 160px; height:160px; font-size: 80px; }
   .board.grid-6 .card { width: 120px; height:120px; font-size: 70px; }
-  .board.grid-8 .card { width: 90px; height: 90px; font-size: 50px; }
-  .board.grid-10 .card { width: 75px; height: 75px; font-size: 40px; }
+  .board.grid-8 .card { width: 80px; height: 80px; font-size: 50px; }
+  .board.grid-10 .card { width: 63px; height: 63px; font-size: 40px; }
 
   .win-message {
     font-size: 55px;
