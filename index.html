@@ -1,72 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
   <meta charset="UTF-8" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,200;0,400&display=swap" rel="stylesheet">
-  <title>Number Guess & Memory & Recall Games</title>
-  <link rel="stylesheet" href="jjGame.css" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playpen+Sans+Thai&display=swap" rel="stylesheet"
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>เกมจับคู่</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>🎮 Web Games By JJ Vasitphon Phiankasikit </h1>
-
-  <!-- Global controls: mode & difficulty -->
-  <div id="controls">
-    <div>
-      <label for="mode-select">Mode:</label>
-      <select id="mode-select">
-        <option value="all">Show all</option>
-        <option value="guess">Number Guess</option>
-        <option value="memory">Memory Game</option>
-        <option value="recall">Number Recall</option>
+  <div class="game-settings">
+    <h1 class="animated-title">เกมจับคู่ โดย วสิษฐ์พล เพียรกสิกิจ</h1>
+    <label style="font-size: 24px;">ขนาดกระดาน:
+      <select id="grid-size">
+        <option value="4">4x4</option>
+        <option value="6">6x6</option>
+        <option value="8">8x8</option>
+        <option value="10">10x10</option>
       </select>
-    </div>
-
-    <div>
-      <label for="level-input">Level (Easy → Hard):</label>
-      <input id="level-input" type="range" min="1" max="10" value="1" />
-      <span id="level-label">Level <span id="level-value">1</span> (Easy)</span>
-    </div>
-
-    <!-- theme toggle -->
-    <div class="theme-switch" title="Toggle dark/light theme">
-      <input type="checkbox" id="theme-toggle" />
-      <label for="theme-toggle">Light mode</label>
-    </div>
+    </label>
+    <label style="font-size: 24px;">โหมด:
+      <select id="mode">
+        <option value="number">ตัวเลข</option>
+        <option value="alphabet">ตัวอักษร</option>
+        <option value="emoji">Emoji</option>
+       
+      </select>
+    </label> 
+    <button id="start-btn">เริ่มเกม</button> 
+    <div class="stats">
+    <p style="font-size: 20px;">เวลา: <span id="timer">00:00 นาที</span> , จับคู่สำเร็จ: <span id="matches">0</span></p>
+  </div>
+ 
   </div>
 
-  <!-- Number Guess -->
-  <section id="number-game">
-    <h2>🎯 Number Guess</h2>
-    <p id="guess-instruction">Guess a number between 1 and <span id="guess-max">10</span></p>
-    <input type="number" id="guess" />
-    <button onclick="checkGuess()">Guess!</button>
-    <p id="result"></p>
-    
-  </section>
+  
+  <div id="game-board" class="board"></div>
 
-  <!-- Memory Game -->
-  <section id="memory-game">
-    <h2>🧠 Memory Game</h2>
-    <p id="memory-instruction">Match the cards — Grid: <span id="memory-pairs">4×4</span></p>
-    <div class="game-board"></div>
-    <p id="memory-result"></p>
-    <button onclick="upLevelMemoryBoard()">Up Level</button>
-  </section>
-
-  <!-- Number Recall -->
-  <section id="recall-game">
-    <h2>🧮 Number Recall</h2>
-    <p id="recall-instruction">Memorize the number sequence</p>
-    <button onclick="startRecallGame()">Random Number</button>
-    <div id="number-sequence"></div>
-    <input type="text" id="recall-input" placeholder="Enter remembered numbers" />
-    <button onclick="submitRecall()">Submit</button>
-    <p id="recall-result"></p>
-  </section>
-  <script src="jjGame.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
-
-
