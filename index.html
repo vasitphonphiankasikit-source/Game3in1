@@ -2,67 +2,51 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playpen+Sans+Thai&display=swap" rel="stylesheet"
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>เกมจับคู่</title>
-
-  <!-- ฟอนต์ -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans+Thai&display=swap" rel="stylesheet">
-
-  <!-- สไตล์ -->
+  
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-  <!-- หัวข้อ -->
-  <header>
-    <h1 class="animated-title">เกมจับคู่</h1>
-    <h2 class="subtitle">โดย วสิษฐ์พล เพียรกสิกิจ</h2>
-  </header>
-
-  <!-- เอฟเฟกต์ emoji ฝนตก -->
-  <div id="emoji-rain-container"></div>
-
-  <!-- ตัวเลือกเกม -->
-  <div>
-    <div class="game-settings">
-      <h3>ขนาดกระดาน:</h3>
+  <h1 class="animated-title">เกมจับคู่ </h1>
+  <h2 >โดย วสิษฐ์พล เพียรกสิกิจ</h2>
+ <div id="emoji-rain-container"></div>
+  <div class="game-settings"> 
+     <h3>ขนาดกระดาน:</h3>
+     <label>
       <select id="grid-size">
         <option value="4">4x4</option>
         <option value="6">6x6</option>
         <option value="8">8x8</option>
         <option value="10">10x10</option>
       </select>
+      </label>
+      
     </div>
-   
-    <div class="game-settings">
+    <div class="game-settings"> 
       <h3>โหมด:</h3>
-      <select id="mode">
-        <option value="number">ตัวเลข</option>
-        <option value="alphabet">ตัวอักษรอังกฤษ</option>
-        <option value="emoji">Emoji</option>
-      </select>
+      <label>
+        <select id="mode">
+          <option value="number">ตัวเลข</option>
+          <option value="alphabet">ตัวอักษรอังกฤษ</option>
+          <option value="emoji">Emoji</option>
+        </select>
+      </label>
     </div>
+    <button id="start-btn"  class="button-animated" >เริ่มเกม</button>
+    <div id="win-effect" class="win-message">🎉✨🥳คุณชนะแล้ว!🎉✨🥳</div>
+    <div class="stats">
+    <p style="font-size: 30px;">เวลา: <span class="timer-display" id="timer">00:00</span> นาที</p>
+    <p id="match-counter" style="display: none;">จับคู่สำเร็จ: <span id="matches">0</span></p>
   </div>
 
-  <!-- ปุ่มเริ่มเกม -->
-  <button id="start-btn" class="button-animated">เริ่มเกม</button>
-
-  <!-- ข้อความชนะ -->
-  <div id="win-effect" class="win-message">🎉✨🥳 คุณชนะแล้ว! 🎉✨🥳</div>
-
-  <!-- สถิติ -->
-  <div class="stats">
-    <p class="timer-label">เวลา: <span class="timer-display" id="timer">00:00</span> นาที</p>
-    <p id="match-counter">จับคู่สำเร็จ: <span id="matches">0</span></p>
-  </div>
-
-  <!-- กระดานเกม -->
+  
   <div id="game-board" class="board"></div>
-
-  <!-- สคริปต์ -->
+  
   <script src="script.js"></script>
 </body>
 </html>
