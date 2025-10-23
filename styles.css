@@ -78,8 +78,8 @@ button, select {
 }
 
 button {
-  font-size: 30px;
-  padding: 20px 80px;
+  font-size: 70px;
+  padding: auto auto;
   color: white;
   background: #bd06c7;
   transition: all 0.3s ease;
@@ -100,7 +100,7 @@ select {
 
 /* หัวข้อ */
 .animated-title {
-  font-size: 50px;
+  font-size: 90px;
   color: #4a02f3;
   animation: bounce 1.5s infinite;
   text-shadow: 2px 2px #ccc;
@@ -205,8 +205,8 @@ select {
   }
 
   button {
-    font-size: 100px;
-    padding: 50px 100px;
+    font-size: 70px;
+    padding: auto auto;
   }
 
   select {
@@ -252,8 +252,8 @@ select {
   }
 
   button {
-    font-size: 28px;
-    padding: 20px 60px;
+    font-size: 70px;
+    padding: auto auto;
   }
 
   select {
@@ -261,5 +261,6 @@ select {
     padding: 12px 24px;
   }
 }
+
 
 
