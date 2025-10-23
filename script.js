@@ -49,7 +49,27 @@ function createBoard(size, values) {
     cards.push(card);
   });
 }
+function startEmojiRain() {
+  const container = document.getElementById('emoji-rain-container');
+  container.innerHTML = ''; // เคลียร์ก่อนเริ่มใหม่
+  const emojis = ['🎉', '✨', '🥳', '🎊', '💫', '🎈', '🌟'];
+  let count = 0;
 
+  const rainInterval = setInterval(() => {
+    const emoji = document.createElement('div');
+    emoji.classList.add('emoji-drop');
+    emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+    emoji.style.left = `${Math.random() * 100}%`;
+    emoji.style.fontSize = `${24 + Math.random() * 24}px`;
+    emoji.style.animationDuration = `${2 + Math.random() * 2}s`;
+    container.appendChild(emoji);
+
+    setTimeout(() => emoji.remove(), 4000);
+
+    count++;
+    if (count > 100) clearInterval(rainInterval); // จำกัดจำนวน
+  }, 100);
+}
 
 function createBoard(size, values) {
   board.innerHTML = '';
@@ -108,6 +128,8 @@ function handleCardClick(e) {
       if (matchedCount === (gridSize * gridSize) / 2) {
         clearInterval(interval);
         document.getElementById('win-effect').style.display = 'block';
+        startEmojiRain();
+
       }
       firstCard = null;
       secondCard = null;
