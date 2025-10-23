@@ -106,25 +106,31 @@ button {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  margin-top: 10px;
-  font-size: 1.25rem;
+  margin-top: 0px;
+  font-size: 30px;
   color: #090808;
   text-transform: uppercase;
-  padding: 5px 10px;
+  padding: 20px 80px;
   border-radius: 10px;
   border: 2px solid #030603;
   color: white;
   background: #bd06c7;
   box-shadow: 3px 3px #3d2b2b;
   cursor: pointer;
-  margin: 35px 0;
+  transition: all 0.3s ease;
+  display: block;
+  margin: 20px auto;
 }
-
 button:active {
   box-shadow: none;
   transform: translate(3px, 3px);
 }
-
+.timer-display {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 55px;
+  margin-top: 10px;
+  color: #333;
+}
 select{
   font-family: "Playpen Sans Thai", cursive;
   font-optical-sizing: auto;
@@ -142,4 +148,23 @@ select{
   box-shadow: 3px 3px #3d2b2b;
   cursor: pointer;
   margin: 35px 0;
+}
+.win-message {
+  display: none;
+  font-size: 48px;
+  font-weight: bold;
+  color: #ff4081;
+  animation: winFlash 2s ease-in-out infinite;
+  margin-top: 20px;
+}
+
+@keyframes winFlash {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.6; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+
+#match-counter {
+  display: none;
 }
