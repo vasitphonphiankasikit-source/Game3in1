@@ -36,10 +36,10 @@ h3{
   margin-top: 20px;
 }
 
-.board.grid-4 .card { width: 80px; height: 80px; font-size: 28px; }
-.board.grid-6 .card { width: 65px; height: 65px; font-size: 24px; }
-.board.grid-8 .card { width: 55px; height: 55px; font-size: 20px; }
-.board.grid-10 .card { width: 45px; height: 45px; font-size: 18px; }
+.board.grid-4 .card { width: 160px; height: 160px; font-size: 56px; }
+.board.grid-6 .card { width: 130px; height: 130px; font-size: 48px; }
+.board.grid-8 .card { width: 110px; height: 110px; font-size: 110px; }
+.board.grid-10 .card { width: 90px; height: 90px; font-size: 36px; }
 
 /* การ์ด */
 .card {
