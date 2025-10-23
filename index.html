@@ -12,35 +12,34 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <h1 class="animated-title">เกมจับคู่ </h1>
+  <h2>โดย วสิษฐ์พล เพียรกสิกิจ</h2>
  <div id="emoji-rain-container"></div>
-  <div class="game-settings">
-    <h1 class="animated-title">เกมจับคู่ โดย</h1>
-    <h1 class="animated-title">วสิษฐ์พล เพียรกสิกิจ</h1>
-    <h3>ขนาดกระดาน:</h3>
-    <label>
+  <div class="game-settings"> 
+     <h3>ขนาดกระดาน:</h3>
+     <label>
       <select id="grid-size">
         <option value="4">4x4</option>
         <option value="6">6x6</option>
         <option value="8">8x8</option>
         <option value="10">10x10</option>
       </select>
-    </label>
-    <h3>โหมด:</h3>
-    <label>
-      <select id="mode">
-        <option value="number">ตัวเลข</option>
-        <option value="alphabet">ตัวอักษร</option>
-        <option value="emoji">Emoji</option>
+      </label>
+      <h3>โหมด:</h3>
+      <label>
+        <select id="mode">
+          <option value="number">ตัวเลข</option>
+          <option value="alphabet">ตัวอักษร</option>
+          <option value="emoji">Emoji</option>
        
-      </select>
-    </label> 
-    <button id="start-btn">เริ่มเกม</button> 
+        </select>
+      </label>
+    </div>
+    <button id="start-btn">เริ่มเกม</button>
     <div id="win-effect" class="win-message">🎉✨🥳คุณชนะแล้ว!🎉✨🥳</div>
     <div class="stats">
     <p style="font-size: 30px;">เวลา: <span class="timer-display" id="timer">00:00</span> นาที</p>
     <p id="match-counter" style="display: none;">จับคู่สำเร็จ: <span id="matches">0</span></p>
-  </div>
- 
   </div>
 
   
