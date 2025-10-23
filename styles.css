@@ -197,7 +197,7 @@ select {
   }
 
   .animated-title {
-    font-size: 200px;
+    font-size: 90px;
   }
 
   .timer-display {
@@ -227,7 +227,7 @@ select {
   }
 
   .animated-title {
-    font-size: 200px;
+    font-size: 90px;
   }
 
   .timer-display {
@@ -244,3 +244,4 @@ select {
     padding: 12px 24px;
   }
 }
+
