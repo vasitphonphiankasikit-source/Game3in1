@@ -4,7 +4,7 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  background: linear-gradient(-45deg, #adff9a, #d8fac4, #22ad1e, #07e0c7);
+  background: linear-gradient(-45deg, #f6b2ed, #f0c4fa, #98caf8, #05e5cb);
   background-size: 400% 400%;
   animation: gradientShift 15s ease infinite;
   display: flex;
@@ -265,3 +265,4 @@ button:active {
   background-color: #06ef06;
   }
 }
+
