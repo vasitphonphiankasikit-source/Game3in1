@@ -1,15 +1,18 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="th">
 <head>
   <meta charset="UTF-8" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans+Thai&display=swap" rel="stylesheet"
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>เกมจับคู่</title>
+ 
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+ 
   <div class="game-settings">
     <h1 class="animated-title">เกมจับคู่ โดย วสิษฐ์พล เพียรกสิกิจ</h1>
     <label style="font-size: 24px;">ขนาดกระดาน:
@@ -29,15 +32,17 @@
       </select>
     </label> 
     <button id="start-btn">เริ่มเกม</button> 
+    <div id="win-effect" class="win-message">🎉✨🥳คุณชนะแล้ว!🎉✨🥳</div>
     <div class="stats">
-    <p style="font-size: 20px;">เวลา: <span id="timer">00:00 นาที</span> , จับคู่สำเร็จ: <span id="matches">0</span></p>
+    <p style="font-size: 30px;">เวลา: <span class="timer-display" id="timer">00:00</span> นาที</p>
+    <p id="match-counter" style="display: none;">จับคู่สำเร็จ: <span id="matches">0</span></p>
   </div>
  
   </div>
 
   
   <div id="game-board" class="board"></div>
-
+  
   <script src="script.js"></script>
 </body>
 </html>
