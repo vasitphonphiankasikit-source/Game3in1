@@ -1,123 +1,145 @@
- :root{
-      --bg: #000;
-      --text: #fff;
-      --card-bg: #2f2f2f;
-      --card-text: #d4d4d4;
-      --btn-bg: #007bff;
-      --btn-text: #f0f0f0;
-    }
-    body.light{
-      --bg: #f9f9f9;
-      --text: #111;
-      --card-bg: #575757;
-      --card-text: #e3e0e0;
-      --btn-bg: #007bff;
-      --btn-text: #fff;
-    }
+body {
+  font-family: "Playpen Sans Thai", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  background: linear-gradient(-45deg, #adff9a, #d8fac4, #22ad1e, #07e0c7);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  text-align: center;
+  padding: 20px;
+}
 
-    body {
-      font-family: "Prompt", sans-serif;
-      font-weight: 400;
-      font-size: 15px;
-      font-style: normal;
-      text-align: center;
-      background: var(--bg);
-      color: var(--text);
-      padding: 20px;
-      transition: background .25s ease, color .25s ease;
-    }
+.board {
+  display: grid;
+  gap: 10px;
+  justify-content: center;
+  align-content: center;
+  margin-top: 20px;
+}
 
-    h1 {
-      margin-bottom: 30px;
-      color: var(--text);
-    }
 
-    section {
-      margin-bottom: 40px;
-    }
+.game-settings {
+  margin-bottom: 20px;
 
-    input {
-      padding: 5px;
-      font-size: 16px;
-      color: var(--text);
-      background: var(--bg);
-      border: 1px solid rgba(255,255,255,0.12);
-    }
+}
 
-    button {
-      font-family: "Prompt", sans-serif;
-      font-weight: 200;
-      font-style: normal;
-      background: var(--btn-bg);
-      color: var(--btn-text);
-      text-transform: uppercase;
-      padding: 5px 10px;
-      font-size: 16px;
-      margin-left: 10px;
-      cursor: pointer;
-    }
+select, button {
+  margin: 5px;
+  padding: 8px;
+  font-size: 16px;
+}
 
-    #result, #memory-result, #recall-result {
-      margin-top: 10px;
-      font-weight: bold;
-    }
+.animated-title {
+  font-size: 48px;
+  color: #4a02f3;
+  animation: bounce 1.5s infinite;
+  text-shadow: 2px 2px #ccc;
+}
 
-    .game-board {
-      display: grid;
-      grid-template-columns: repeat(4, 80px);
-      gap: 10px;
-      justify-content: center;
-      margin-top: 20px;
-    }
+/* แอนิเมชันเด้งขึ้นลง */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
 
-    .card {
-      width: 80px;
-      height: 80px;
-      background: var(--card-bg);
-      color: var(--card-text);
-      font-size: 2em;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      border-radius: 8px;
-      user-select: none;
-      transition: background .2s ease, color .2s ease;
-    }
+.card {
+  background-color: #eb8dd2;
+  border: 2px solid #100a0a;
+  font-size: 24px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s;
+}
 
-    .card.flipped {
-      background: var(--card-text);
-      color: var(--card-bg);
-    }
+/* ขนาดตาม grid */
+.board.grid-4 .card {
+  width: 80px;
+  height: 80px;
+  font-size: 28px;
+}
 
-    #number-sequence {
-      font-size: 24px;
-      margin: 15px 0;
-      letter-spacing: 10px;
-      color: var(--text);
-    }
+.board.grid-6 .card {
+  width: 65px;
+  height: 65px;
+  font-size: 24px;
+}
 
-    /* controls */
-    #controls {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 20px;
-      flex-wrap: wrap;
-    }
+.board.grid-8 .card {
+  width: 55px;
+  height: 55px;
+  font-size: 20px;
+}
 
-    #controls label { font-weight: 600; color: var(--text); }
-    #level-value { font-weight: 700; margin-left: 8px; color: var(--text); }
+.board.grid-10 .card {
+  width: 45px;
+  height: 45px;
+  font-size: 18px;
+}
 
-    /* theme toggle */
-    .theme-switch {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      cursor: pointer;
-      user-select: none;
-    }
-    .theme-switch input {
-       transform: scale(1.1);
-       }
+.card.revealed {
+  background-color: #defc02;
+}
+
+.card.matched {
+  background-color: #06ef06;
+  cursor: default;
+}
+
+button {
+  font-family: "Playpen Sans Thai", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 10px;
+  font-size: 1.25rem;
+  color: #090808;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 2px solid #030603;
+  color: white;
+  background: #bd06c7;
+  box-shadow: 3px 3px #3d2b2b;
+  cursor: pointer;
+  margin: 35px 0;
+}
+
+button:active {
+  box-shadow: none;
+  transform: translate(3px, 3px);
+}
+
+select{
+  font-family: "Playpen Sans Thai", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 10px;
+  font-size: 1.00rem;
+  color: #090808;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border: 2px solid #030603;
+  border-radius: 10px;
+  color: white;
+  background: #9700f5;
+  box-shadow: 3px 3px #3d2b2b;
+  cursor: pointer;
+  margin: 35px 0;
+}
