@@ -36,10 +36,10 @@ h3{
   margin-top: 20px;
 }
 
-.board.grid-4 .card { width: 150px; height: 150px; font-size: 53px; }
-.board.grid-6 .card { width: 120px; height: 120px; font-size: 45px; }
-.board.grid-8 .card { width: 90px; height: 90px; font-size: 35px; }
-.board.grid-10 .card { width: 65px; height: 65px; font-size: 33px; }
+.board.grid-4 .card { width: 80px; height: 80px; font-size: 28px; }
+.board.grid-6 .card { width: 65px; height: 65px; font-size: 24px; }
+.board.grid-8 .card { width: 55px; height: 55px; font-size: 20px; }
+.board.grid-10 .card { width: 45px; height: 45px; font-size: 18px; }
 
 /* การ์ด */
 .card {
@@ -91,8 +91,8 @@ button:active {
 }
 
 select {
-  font-size: 2rem;
-  padding: 5px 40px;
+  font-size: 1.7rem;
+  padding: auto auto;
   color: white;
   background: #9700f5;
   margin: 35px 10px 0 0 0;
@@ -100,7 +100,7 @@ select {
 
 /* หัวข้อ */
 .animated-title {
-  font-size: 90px;
+  font-size: 50px;
   color: #4a02f3;
   animation: bounce 1.5s infinite;
   text-shadow: 2px 2px #ccc;
@@ -164,34 +164,14 @@ select {
 #match-counter {
   display: none;
 }
-
 /* Responsive สำหรับมือถือ */
-
-@media (max-width: 750px) {
-  
-  .board.grid-4 .card {
-    width: 160px !important;
-    height: 160px !important;
-    font-size: 56px !important;
+@media (max-width: 1255px) and (min-height: 2400px) {
+  .card {
+    width: 250px !important;
+    height: 250px !important;
+    font-size: 100px !important;
   }
 
-  .board.grid-6 .card {
-    width: 130px !important;
-    height: 130px !important;
-    font-size: 48px !important;
-  }
-
-  .board.grid-8 .card {
-    width: 110px !important;
-    height: 110px !important;
-    font-size: 40px !important;
-  }
-
-  .board.grid-10 .card {
-    width: 90px !important;
-    height: 90px !important;
-    font-size: 36px !important;
-  }
   .win-message {
     font-size: 150px;
   }
@@ -205,8 +185,8 @@ select {
   }
 
   button {
-    font-size: 70px;
-    padding: auto auto;
+    font-size: 100px;
+    padding: 50px 100px;
   }
 
   select {
@@ -215,30 +195,13 @@ select {
   }
 }
 
-@media (max-width: 600px) {
-  .board.grid-4 .card {
-    width: 160px !important;
-    height: 160px !important;
-    font-size: 56px !important;
+@media (max-width: 800px) and (min-height: 1000px) {
+  .card {
+    width: 250px !important;
+    height: 250px !important;
+    font-size: 100px !important;
   }
 
-  .board.grid-6 .card {
-    width: 130px !important;
-    height: 130px !important;
-    font-size: 48px !important;
-  }
-
-  .board.grid-8 .card {
-    width: 110px !important;
-    height: 110px !important;
-    font-size: 40px !important;
-  }
-
-  .board.grid-10 .card {
-    width: 90px !important;
-    height: 90px !important;
-    font-size: 36px !important;
-  }
   .win-message {
     font-size: 28px;
   }
@@ -252,8 +215,8 @@ select {
   }
 
   button {
-    font-size: 70px;
-    padding: auto auto;
+    font-size: 28px;
+    padding: 20px 60px;
   }
 
   select {
@@ -261,6 +224,3 @@ select {
     padding: 12px 24px;
   }
 }
-
-
-
