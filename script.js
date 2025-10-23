@@ -73,6 +73,7 @@ function createBoard(size, values) {
 
 
 function startGame() {
+  document.getElementById('win-effect').style.display = 'none';
   gridSize = parseInt(gridSizeSelect.value);
   mode = modeSelect.value;
   const values = generateValues(gridSize, mode);
@@ -126,3 +127,4 @@ function handleCardClick(e) {
 
 startBtn.addEventListener('click', startGame);
 difficultyBtn.addEventListener('click', increaseDifficulty);
+
