@@ -18,7 +18,7 @@ body {
   justify-content: flex-start;
 }
 h3{
-  font-size: 30px;
+  font-size: 50px;
   color: #333;
   margin: 0 0;
 }
@@ -92,7 +92,7 @@ button:active {
 }
 
 select {
-  font-size: 1.7rem;
+  font-size: 30px;
   padding: auto auto;
   color: white;
   background: #9700f5;
@@ -167,37 +167,25 @@ select {
 }
 /* Responsive สำหรับมือถือ */
 @media (max-width: 1255px) and (max-height: 2388px) {
-  .card {
-    width: 150px !important;
-    height: 150px !important;
-    font-size: 100px !important;
-  }
-  .board.grid-4 .card { 
-    width: 140px; 
-    height: 140px; 
-    font-size: 42px; 
-  }
-  .board.grid-6 .card { 
-    width: 90px; 
-    height: 90px; 
-    font-size: 40px;
-  }
-  .board.grid-8 .card { 
-    width: 60px; 
-    height: 60px; 
-    font-size: 40px; 
-  }
-  .board.grid-10 .card { 
-    width: 45px; 
-    height: 45px; 
-    font-size: 25px; 
-  }
+  .board {
+  display: grid;
+  gap: 10px;
+  justify-content: center;
+  align-content: center;
+  margin-top: 20px;
+}
+
+.board.grid-4 .card { width: 100px; height:100px; font-size: 60px; }
+.board.grid-6 .card { width: 80px; height: 80px; font-size: 50px; }
+.board.grid-8 .card { width: 70px; height: 70px; font-size: 70px; }
+.board.grid-10 .card { width: 50px; height: 50px; font-size: 30px; }
+
   .win-message {
-    font-size: 75px;
+    font-size: 100px;
   }
 
   .animated-title {
-    font-size: 90px;
+    font-size: 100px;
   }
 
   .timer-display {
@@ -205,48 +193,37 @@ select {
   }
 
   button {
-    font-size: 80px;
-    padding: 50px 100px;
+    font-size: 70px;
+    padding: auto auto;
   }
 
   select {
     font-size: 40px;
-    padding: 12px 24px;
+    padding: auto auto;
   }
 }
 
 @media (max-width: 800px) and (min-height: 1496px) {
-  .card {
-    width: 100px !important;
-    height: 100px !important;
-    font-size: 100px !important;
+  .board {
+  display: grid;
+  gap: 10px;
+  justify-content: center;
+  align-content: center;
+  margin-top: 20px;
   }
-  .board.grid-4 .card { 
-    width: 100px; 
-    height: 100px; 
-    font-size: 50px; 
-  }
-  .board.grid-6 .card { 
-    width: 70px; 
-    height: 70px; 
-    font-size: 40px;
-  }
-  .board.grid-8 .card { 
-    width: 50px; 
-    height: 50px; 
-    font-size: 30px; 
-  }
-  .board.grid-10 .card { 
-    width: 45px; 
-    height: 45px; 
-    font-size: 30px; 
-  }
+
+  .board.grid-4 .card { width: 100px; height:100px; font-size: 60px; }
+  .board.grid-6 .card { width: 80px; height: 80px; font-size: 50px; }
+  .board.grid-8 .card { width: 70px; height: 70px; font-size: 70px; }
+  .board.grid-10 .card { width: 50px; height: 50px; font-size: 30px; }
+
+
   .win-message {
-    font-size: 75px;
+    font-size: 28px;
   }
 
   .animated-title {
-    font-size: 90px;
+    font-size: 200px;
   }
 
   .timer-display {
@@ -254,16 +231,12 @@ select {
   }
 
   button {
-    font-size: 80px;
-    padding: 50px 100px;
+    font-size: 28px;
+    padding: 20px 60px;
   }
 
   select {
-    font-size: 40px;
+    font-size: 60px;
     padding: 12px 24px;
   }
 }
-
-
-
-
