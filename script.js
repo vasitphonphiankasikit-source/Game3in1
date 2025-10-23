@@ -127,4 +127,3 @@ function handleCardClick(e) {
 
 startBtn.addEventListener('click', startGame);
 difficultyBtn.addEventListener('click', increaseDifficulty);
-
