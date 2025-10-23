@@ -86,6 +86,16 @@ button{
   margin: 20px auto;
   display: block;
 }
+@keyframes pulseButton {
+  0% { transform: scale(1); box-shadow: 0 0 10px #fff; }
+  50% { transform: scale(1.05); box-shadow: 0 0 20px #ff0; }
+  100% { transform: scale(1); box-shadow: 0 0 10px #fff; }
+}
+
+.button-animated {
+  animation: pulseButton 1.5s infinite;
+}
+
 .game-settings {
   display: flex;
   flex-wrap: wrap;
