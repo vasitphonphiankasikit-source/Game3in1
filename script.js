@@ -71,19 +71,20 @@ function createBoard(size, values) {
   });
 }
 
+
 function startGame() {
   gridSize = parseInt(gridSizeSelect.value);
   mode = modeSelect.value;
   const values = generateValues(gridSize, mode);
   createBoard(gridSize, values);
   timer = 0;
-  timerDisplay.textContent = '00:00 นาที';
+  timerDisplay.textContent = '00:00';
   clearInterval(interval);
   interval = setInterval(() => {
   timer++;
   const minutes = Math.floor(timer / 60);
   const seconds = timer % 60;
-  timerDisplay.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')} นาที`;
+  timerDisplay.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
 }, 1000);
 
 }
@@ -105,7 +106,7 @@ function handleCardClick(e) {
       matchesDisplay.textContent = matchedCount;
       if (matchedCount === (gridSize * gridSize) / 2) {
         clearInterval(interval);
-        alert(`ชนะแล้ว! ใช้เวลาไปทั้งหมด ${timerDisplay.textContent} นาที`);
+        document.getElementById('win-effect').style.display = 'block';
       }
       firstCard = null;
       secondCard = null;
