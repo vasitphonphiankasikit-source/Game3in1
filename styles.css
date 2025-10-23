@@ -175,10 +175,10 @@ select {
   margin-top: 20px;
 }
 
-.board.grid-4 .card { width: 100px; height:100px; font-size: 60px; }
-.board.grid-6 .card { width: 80px; height: 80px; font-size: 50px; }
-.board.grid-8 .card { width: 70px; height: 70px; font-size: 70px; }
-.board.grid-10 .card { width: 50px; height: 50px; font-size: 30px; }
+.board.grid-4 .card { width: 130px; height:130px; font-size: 70px; }
+.board.grid-6 .card { width: 100px; height:100px; font-size: 60px; }
+.board.grid-8 .card { width: 80px; height: 80px; font-size: 50px; }
+.board.grid-10 .card { width: 70px; height: 70px; font-size: 40px; }
 
   .win-message {
     font-size: 100px;
@@ -212,18 +212,17 @@ select {
   margin-top: 20px;
   }
 
-  .board.grid-4 .card { width: 100px; height:100px; font-size: 60px; }
-  .board.grid-6 .card { width: 80px; height: 80px; font-size: 50px; }
-  .board.grid-8 .card { width: 70px; height: 70px; font-size: 70px; }
-  .board.grid-10 .card { width: 50px; height: 50px; font-size: 30px; }
-
+  .board.grid-4 .card { width: 130px; height:130px; font-size: 70px; }
+  .board.grid-6 .card { width: 100px; height:100px; font-size: 60px; }
+  .board.grid-8 .card { width: 80px; height: 80px; font-size: 50px; }
+  .board.grid-10 .card { width: 70px; height: 70px; font-size: 40px; }
 
   .win-message {
-    font-size: 28px;
+    font-size: 40px;
   }
 
   .animated-title {
-    font-size: 200px;
+    font-size: 60px;
   }
 
   .timer-display {
