@@ -93,6 +93,7 @@ function createBoard(size, values) {
 
 
 function startGame() {
+  document.getElementById('start-btn').classList.remove('button-animated');
   document.getElementById('win-effect').style.display = 'none';
   gridSize = parseInt(gridSizeSelect.value);
   mode = modeSelect.value;
@@ -127,6 +128,7 @@ function handleCardClick(e) {
       matchesDisplay.textContent = matchedCount;
       if (matchedCount === (gridSize * gridSize) / 2) {
         clearInterval(interval);
+        document.getElementById('start-btn').classList.add('button-animated');
         document.getElementById('win-effect').style.display = 'block';
         startEmojiRain();
 
